@@ -19,6 +19,12 @@
     --secondary-bg-color: #f5f4fa;
     /* фон кнопки в hero-btn */
     --background-color-hero-btn: #188CE8;
+    /* колір бордерів */
+    --border-color: #ECECEC;
+
+    --main-margin: 30px;
+    --secondary-margin: 50px;
+    --small-margin: 10px;
 }
 
 
@@ -34,15 +40,27 @@ img {
     max-width: 100%;
     height: auto;
   }
-  p,
+p,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   margin: 0;
 }
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
 /*====скидаємо загальний стиль тексту сторінки==== */
 .link {
@@ -58,16 +76,22 @@ text-decoration: none;
 .link:focus {
     color: var(--accent-color);
 }
+
+/* =======Шапка========== */
+.header {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .header-container {
+  display: flex;
+  align-items: center;
+}
+  
 /* ======Логотип======== */
 .logo {
     font-family: 'Raleway', sans-serif;
         font-weight: 700;
         font-size: 26px;
         line-height: 1.19;
-        /* identical to box height */
-    
-        letter-spacing: 0.03em;
-    
         color: var(--accent-color);
 }
 
@@ -79,8 +103,31 @@ text-decoration: none;
     color: var(--primary-bg-color);
 }
 /* =====навігація сайту і контакти в шапці====  */
+
+.navigation {
+    margin-left: 93px;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .site-nav-item:not(:last-child),
+.contact-item:not(:last-child) {
+  margin-right: var(--secondary-margin);
+}
+
 .site-nav-link,
 .contact-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -102,20 +149,35 @@ text-decoration: none;
 /* ======Головна сторінка(HERO)======= */
 .hero {
     background-color: var(--footer-bg-color);
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 .hero-title {
+    margin: 0 auto;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    max-width: 696px;
 
     color: var(--order-title-text-color);
 }
 
 .hero-btn {
+    width: 200px;
+  height: var(--secondary-margin);
+  margin-top: var(--main-margin);
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -124,6 +186,11 @@ text-decoration: none;
 
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
+
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
 
     cursor: pointer;
 }
@@ -145,12 +212,27 @@ text-decoration: none;
     text-align: center;
 }
 .section-title {
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
 }
 /* секція - особливості */
+.features-section {
+    padding-bottom: 0px;
+  }
+  .features {
+    display: flex;
+    margin-left: calc(-1 * var(--main-margin));
+  }
+  .feature-item {
+    flex-basis: calc(100% / 4 - var(--main-margin));
+    margin-left: var(--main-margin);
+  }  
 .feature-title {
+    margin-bottom: var(--small-margin);
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
