@@ -29,6 +29,20 @@ body {
     background-color: var(--primary-bg-color);
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
 /*====скидаємо загальний стиль тексту сторінки==== */
 .link {
@@ -116,7 +130,7 @@ text-decoration: none;
 .hero-btn:hover,
 .hero-btn:focus {
     color: var(--accent-color);
-    background-color: var(--background-color-hero-btn);
+    background-color: var(--primary-bg-color);
 }
 
 /*=========== загальний стиль в секціях ======*/
