@@ -1,0 +1,230 @@
+:root {
+    /* основний колір тексту */
+    --primary-text-color: #757575;
+    /* колір ссилок ховер */
+    --accent-color: #2196f3;
+    /* другорядний колір тексту */
+    --title-text-color: #212121;
+    /* колір тексту заголовка в Герої */
+    --order-title-text-color: #fff;
+    /* фон сторінки вебсайту */
+    --primary-bg-color: #fff;
+    /* другорядний фон сторінки(футер та замовлення послу) */
+    --footer-bg-color: #2f303a;
+    /* колір контактів в футері */
+    --footer-contacts-color: rgba(255, 255, 255, 0.6);
+    /* колір лого "студіо" в хедері */
+    --logo-studio-header-color: #000;
+    /* колір фону ""Наша команда */
+    --secondary-bg-color: #f5f4fa;
+    /* фон кнопки в hero-btn */
+    --background-color-hero-btn: #188CE8;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+
+
+/*====скидаємо загальний стиль тексту сторінки==== */
+.link {
+text-decoration: none;
+}
+
+/* ====убираємо впорядкування списків===== */
+.list {
+    list-style: none;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--accent-color);
+}
+/* ======Логотип======== */
+.logo {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        /* identical to box height */
+    
+        letter-spacing: 0.03em;
+    
+        color: var(--accent-color);
+}
+
+.header-studio {
+    color: var(--logo-studio-header-color);
+}
+
+.footer-studio {
+    color: var(--primary-bg-color);
+}
+/* =====навігація сайту і контакти в шапці====  */
+.site-nav-link,
+.contact-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.site-nav-link {
+    color: var(--title-text-color);
+}
+.site-nav-link.current {
+    color: var(--accent-color);
+  }
+  
+
+.contact-link {
+    color: var(--primary-text-color);
+}
+
+/* ======Головна сторінка(HERO)======= */
+.hero {
+    background-color: var(--footer-bg-color);
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--order-title-text-color);
+}
+
+.hero-btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+
+    cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    color: var(--accent-color);
+    background-color: var(--background-color-hero-btn);
+}
+
+/*=========== загальний стиль в секціях ======*/
+.section-title,
+.feature-title,
+.member-title {
+    color: var(--title-text-color);
+}
+.section-title,
+.member-title,
+.member-desc {
+    text-align: center;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+}
+/* секція - особливості */
+.feature-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.feature-desc {
+    font-size: 14px;
+    line-height: 1.71;
+}
+/* секція - команда */
+.team {
+    background-color: var(--secondary-bg-color);
+}
+
+.member-title,
+.member-desc {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.member-title {
+    font-weight: 500;
+}
+
+
+
+
+
+/* =========підвал сайту======= */
+
+footer {
+    background-color: var(--footer-bg-color);
+}
+
+.address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.address-map {
+    color: var(--primary-bg-color);
+}
+
+.address-link {
+    color: var(--footer-contacts-color);
+}
+
+/*=======Сторінка - Портфоліо======== */
+
+.filter-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+  
+    color: var(--title-text-color);
+    background-color: var(--secondary-bg-color);
+  
+    cursor: pointer;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+  }
+  
+  .project-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  
+    color: var(--title-text-color);
+  }
+  
+  .project-desc {
+    font-size: 16px;
+    line-height: 1.87;
+  
+    color: var(--primary-text-color);
+  }
+  
+  .active {
+    background-color: var(--accent-color) !important;
+    color: var(--order-title-text-color) !important;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+          0px 2px 2px rgba(0, 0, 0, 0.12);
